@@ -21,6 +21,9 @@ namespace Vs2015WinFormsEfcSqliteCodeFirst20170304Example.Migrations
 
                     b.HasKey("Id");
 
+					// The following line was added manually
+                    b.HasIndex("Name").IsUnique();
+
                     b.ToTable("Cities");
                 });
 

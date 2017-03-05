@@ -17,6 +17,9 @@ namespace Vs2015WinFormsEfcSqliteCodeFirst20170304Example.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Cities", x => x.Id);
+
+					// The following line was added manually
+                    table.UniqueConstraint("UQ_Cities_Name", x => x.Name);
                 });
 
             migrationBuilder.CreateTable(
